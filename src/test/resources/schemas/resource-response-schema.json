@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ResourceResponse",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "shortId": { "type": "string" },
+    "businessId": { "type": "string" },
+    "type": { "type": "string" },
+    "name": { "type": "string" },
+    "price": { "type": "number" },
+    "primaryImage": { "type": ["string", "null"] },
+    "supportingImages": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "primaryImageKey": { "type": ["string", "null"] },
+    "supportingImageKeys": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "description": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] },
+    "availableQuantity": { "type": "number" },
+    "lowStockThreshold": { "type": "number" },
+    "businessHours": { "type": ["object", "null"] },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "required": [
+    "id", "shortId", "businessId", "type", "name", "price",
+    "supportingImages", "supportingImageKeys",
+    "availableQuantity", "lowStockThreshold",
+    "createdAt", "updatedAt"
+  ],
+  "additionalProperties": true
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SearchResultsResponse",
+  "type": "object",
+  "properties": {
+    "query": { "type": "string" },
+    "customers": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "resources": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "orders": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "invoices": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "appointments": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  },
+  "required": ["query", "customers", "resources", "orders", "invoices", "appointments"],
+  "additionalProperties": true
+}

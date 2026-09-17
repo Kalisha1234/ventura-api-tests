@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CustomerResponse",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "shortId": { "type": "string" },
+    "businessId": { "type": "string" },
+    "name": { "type": "string" },
+    "email": { "type": ["string", "null"] },
+    "phone": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "required": [
+    "id", "shortId", "businessId", "name", "createdAt", "updatedAt"
+  ],
+  "additionalProperties": true
+}

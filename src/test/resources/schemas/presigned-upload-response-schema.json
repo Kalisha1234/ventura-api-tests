@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PresignedUploadResponse",
+  "type": "object",
+  "properties": {
+    "fileKey": { "type": "string" },
+    "fileUrl": { "type": "string" },
+    "uploadUrl": { "type": "string" }
+  },
+  "required": ["fileKey", "fileUrl", "uploadUrl"],
+  "additionalProperties": true
+}

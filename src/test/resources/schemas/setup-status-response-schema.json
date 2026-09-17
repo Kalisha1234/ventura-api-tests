@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SetupStatusResponse",
+  "type": "object",
+  "properties": {
+    "hasBusiness": { "type": "boolean" },
+    "hasCustomers": { "type": "boolean" },
+    "hasResources": { "type": "boolean" },
+    "hasOrders": { "type": "boolean" },
+    "hasInvoices": { "type": "boolean" },
+    "hasAppointments": { "type": "boolean" },
+    "complete": { "type": "boolean" }
+  },
+  "required": [
+    "hasBusiness", "hasCustomers", "hasResources",
+    "hasOrders", "hasInvoices", "hasAppointments", "complete"
+  ],
+  "additionalProperties": true
+}

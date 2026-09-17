@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AppointmentResponse",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "shortId": { "type": "string" },
+    "businessId": { "type": "string" },
+    "createdBy": { "type": "string" },
+    "title": { "type": "string" },
+    "start": { "type": "string" },
+    "end": { "type": "string" },
+    "notes": { "type": ["string", "null"] },
+    "location": { "type": ["string", "null"] },
+    "invitees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "email": { "type": ["string", "null"] },
+          "customerId": { "type": ["string", "null"] }
+        },
+        "required": ["name"],
+        "additionalProperties": true
+      }
+    },
+    "recurrence": {
+      "type": ["object", "null"],
+      "properties": {
+        "frequency": { "type": "string" },
+        "interval": { "type": "integer" },
+        "until": { "type": ["string", "null"] }
+      },
+      "required": ["frequency", "interval"],
+      "additionalProperties": true
+    },
+    "status": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "required": [
+    "id", "shortId", "businessId", "createdBy", "title",
+    "start", "end", "invitees", "status",
+    "createdAt", "updatedAt"
+  ],
+  "additionalProperties": true
+}

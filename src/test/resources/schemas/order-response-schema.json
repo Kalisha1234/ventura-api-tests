@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OrderResponse",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "orderNumber": { "type": "string" },
+    "businessId": { "type": "string" },
+    "customerId": { "type": "string" },
+    "customerName": { "type": "string" },
+    "customerEmail": { "type": ["string", "null"] },
+    "customerPhone": { "type": ["string", "null"] },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "resourceId": { "type": "string" },
+          "type": { "type": "string" },
+          "name": { "type": "string" },
+          "price": { "type": "number" },
+          "quantity": { "type": "number" },
+          "subTotal": { "type": "number" }
+        },
+        "required": ["resourceId", "type", "name", "price", "quantity", "subTotal"],
+        "additionalProperties": true
+      }
+    },
+    "totalAmount": { "type": "number" },
+    "status": { "type": "string" },
+    "invoiceId": { "type": ["string", "null"] },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "required": [
+    "id", "orderNumber", "businessId", "customerId", "customerName",
+    "items", "totalAmount", "status", "createdAt", "updatedAt"
+  ],
+  "additionalProperties": true
+}

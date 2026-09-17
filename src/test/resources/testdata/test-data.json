@@ -1,0 +1,44 @@
+{
+  "passwordSet": {
+    "userId": "6a527ea6322ffef7294bb9a1",
+    "email": "user@ventura.com",
+    "newPassword": "sup3r-Secret!pw"
+  },
+  "invalidSignUp": {
+    "missingEmail": { "firstName": "Ada" },
+    "missingFirstName": { "email": "ada@example.com" },
+    "malformedEmail": { "firstName": "Ada", "email": "not-an-email" }
+  },
+  "invalidPassword": {
+    "tooShort": {
+      "userId": "6a527ea6322ffef7294bb9a1",
+      "email": "user@ventura.com",
+      "newPassword": "short1!"
+    },
+    "malformedEmail": {
+      "userId": "6a527ea6322ffef7294bb9a1",
+      "email": "not-an-email",
+      "newPassword": "sup3r-Secret!pw"
+    }
+  },
+  "invalidSignIn": {
+    "wrongPassword": {
+      "email": "user@ventura.com",
+      "password": "definitely-the-wrong-password!"
+    },
+    "unknownUser": {
+      "email": "no-such-user@example.com",
+      "password": "sup3r-Secret!pw"
+    }
+  },
+  "enums": {
+    "appointmentStatus": ["scheduled", "completed", "attended", "cancelled"],
+    "orderStatus": ["pending", "completed", "cancelled"],
+    "invoiceStatus": ["DRAFT", "SENT", "PAID", "PARTIALLY_PAID", "OVERDUE", "CANCELLED"],
+    "invoiceType": ["STANDARD", "PROFORMA", "RECEIPT"],
+    "paymentMethod": ["CASH", "MOBILE_MONEY", "BANK_TRANSFER", "CARD", "CHEQUE"],
+    "resourceType": ["product", "service"]
+  },
+  "notFoundId": "000000000000000000000000",
+  "malformedId": "not-a-valid-object-id"
+}

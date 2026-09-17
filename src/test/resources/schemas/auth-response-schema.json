@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AuthResponse",
+  "type": "object",
+  "properties": {
+    "accessToken": { "type": "string" },
+    "refreshToken": { "type": "string" },
+    "user": { "type": "object" }
+  },
+  "required": ["accessToken", "refreshToken", "user"],
+  "additionalProperties": true
+}

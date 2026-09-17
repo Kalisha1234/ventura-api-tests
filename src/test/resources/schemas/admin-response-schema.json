@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AdminResponse",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "shortId": { "type": "string" },
+    "name": { "type": "string" },
+    "email": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "required": [
+    "id", "shortId", "name", "email", "createdAt", "updatedAt"
+  ],
+  "additionalProperties": true
+}

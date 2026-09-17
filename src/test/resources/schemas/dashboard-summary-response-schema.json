@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DashboardSummaryResponse",
+  "type": "object",
+  "properties": {
+    "revenue": {
+      "type": "object",
+      "properties": {
+        "total": { "type": "number" },
+        "last30Days": { "type": "number" },
+        "previous30Days": { "type": "number" },
+        "trendPercent": { "type": ["number", "null"] }
+      },
+      "required": ["total", "last30Days", "previous30Days"]
+    },
+    "inventory": {
+      "type": "object",
+      "properties": {
+        "lowStockCount": { "type": "number" },
+        "topProducts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "resourceId": { "type": "string" },
+              "name": { "type": "string" },
+              "unitsSold": { "type": "number" }
+            },
+            "required": ["resourceId", "name", "unitsSold"]
+          }
+        }
+      },
+      "required": ["lowStockCount", "topProducts"]
+    },
+    "recentInvoices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "invoiceId": { "type": "string" },
+          "invoiceNumber": { "type": "string" },
+          "customerName": { "type": ["string", "null"] },
+          "totalAmount": { "type": "number" },
+          "status": { "type": "string" },
+          "createdAt": { "type": "string" }
+        },
+        "required": ["invoiceId", "invoiceNumber", "totalAmount", "status", "createdAt"]
+      }
+    },
+    "dailyRevenue": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": { "type": "string" },
+          "amount": { "type": "number" }
+        },
+        "required": ["date", "amount"]
+      }
+    }
+  },
+  "required": ["revenue", "inventory", "recentInvoices", "dailyRevenue"],
+  "additionalProperties": true
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InvoiceResponse",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "invoiceNumber": { "type": "string" },
+    "businessId": { "type": "string" },
+    "orderIds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "customerId": { "type": ["string", "null"] },
+    "customerName": { "type": ["string", "null"] },
+    "customerEmail": { "type": ["string", "null"] },
+    "customerPhone": { "type": ["string", "null"] },
+    "invoiceType": { "type": "string" },
+    "subtotal": { "type": "number" },
+    "vatRate": { "type": "number" },
+    "vatAmount": { "type": "number" },
+    "nhilRate": { "type": "number" },
+    "nhilAmount": { "type": "number" },
+    "getfundRate": { "type": "number" },
+    "getfundAmount": { "type": "number" },
+    "totalTax": { "type": "number" },
+    "totalAmount": { "type": "number" },
+    "amountPaid": { "type": "number" },
+    "status": { "type": "string" },
+    "paymentMethod": { "type": ["string", "null"] },
+    "paymentDate": { "type": ["string", "null"] },
+    "issueDate": { "type": ["string", "null"] },
+    "dueDate": { "type": ["string", "null"] },
+    "sentAt": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "required": [
+    "id", "invoiceNumber", "businessId", "orderIds", "invoiceType",
+    "subtotal", "vatRate", "vatAmount", "nhilRate", "nhilAmount",
+    "getfundRate", "getfundAmount", "totalTax", "totalAmount", "amountPaid",
+    "status", "createdAt", "updatedAt"
+  ],
+  "additionalProperties": true
+}

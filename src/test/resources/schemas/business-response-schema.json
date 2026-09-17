@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BusinessResponse",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "shortId": { "type": "string" },
+    "name": { "type": "string" },
+    "ownerId": { "type": "string" },
+    "categories": { "type": "array", "items": { "type": "string" } },
+    "description": { "type": ["string", "null"] },
+    "tagLine": { "type": ["string", "null"] },
+    "logo": { "type": ["string", "null"] },
+    "logoKey": { "type": ["string", "null"] },
+    "email": { "type": ["string", "null"] },
+    "phone": { "type": ["string", "null"] },
+    "website": { "type": ["string", "null"] },
+    "address": { "type": ["string", "null"] },
+    "city": { "type": ["string", "null"] },
+    "state": { "type": ["string", "null"] },
+    "country": { "type": ["string", "null"] },
+    "taxId": { "type": ["string", "null"] },
+    "registrationNumber": { "type": ["string", "null"] },
+    "businessHours": { "type": ["object", "null"] },
+    "socials": { "type": "object" },
+    "isActive": { "type": "boolean" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "required": [
+    "id", "shortId", "name", "ownerId", "categories",
+    "isActive", "createdAt", "updatedAt"
+  ],
+  "additionalProperties": true
+}
